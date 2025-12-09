@@ -1,0 +1,80 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* --- Chatbot Styles --- */
+
+.chatbot-container {
+  position: fixed;
+  bottom: 20px; /* Adjust spacing from the bottom */
+  right: 20px; /* Adjust spacing from the right */
+  z-index: 1000; /* Ensure it's above most other content */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align items to the right */
+}
+
+.chatbot-container .chatbot-toggle-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--ifm-color-primary); /* Use primary theme color */
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Space between chatbot and button */
+}
+
+/* Style for when the chatbot is open */
+.chatbot-container .chatbot-window-wrapper { /* Updated selector */
+  max-width: 350px; /* Max width for the chatbot window */
+  max-height: 70vh; /* Max height for the chatbot window */
+  overflow: auto; /* Enable scrolling if content exceeds max height */
+  background-color: white; /* Background for the chatbot window */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px; /* Space between chatbot and button */
+}
+
+/* You might need to adjust styles within the Chatbot component itself 
+   (e.g., in its own CSS modules) to integrate with this container. */
+
+/* Example: If Chatbot component renders a root div, it might need to be styled */
+/* .chatbot-container .chatbot-content { ... } */
+
+/* Ensure button is visible even when chatbot is closed */
+.chatbot-container .chatbot-toggle-button {
+  z-index: 1001; /* Button should be on top */
+}

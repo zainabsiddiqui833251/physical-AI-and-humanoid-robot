@@ -1,0 +1,102 @@
+.heroBanner {
+  padding: 6rem 0;
+  /* Increased padding for a full-width text banner */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  /* Use flexbox for better alignment */
+  align-items: center;
+  /* Vertically center content */
+  min-height: 70vh;
+  /* Make it taller */
+  text-align: center;
+  /* Center text */
+}
+
+.heroTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Center content */
+  text-align: center;
+  /* Center text */
+  width: 100%;
+  /* Ensure it takes full width */
+  padding: 0 2rem;
+  /* Add some horizontal padding */
+}
+
+.heroTitle {
+  font-size: 4rem;
+  /* Larger title */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  /* Tighter line height for title */
+}
+
+.heroTagline {
+  font-size: 1.3rem;
+  /* Larger tagline */
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  /* Slightly reduced opacity */
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Center buttons */
+}
+
+/* Styles for the hero image container and image */
+.heroImageContainer {
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+  padding: 2rem; /* Add padding around the image */
+  text-align: center; /* Fallback for centering */
+}
+
+.heroImage {
+  max-width: 100%; /* Ensure image fits within its container */
+  height: auto; /* Maintain aspect ratio */
+  width: 80%; /* Make image a bit larger than default */
+  display: block; /* Remove extra space below image */
+  margin: 0 auto; /* Center the image within its container */
+  border-radius: 8px; /* Optional: slightly rounded corners */
+}
+
+/* Responsive adjustments */
+@media (max-width: 996px) {
+  .heroBanner {
+    padding: 4rem 0;
+    min-height: auto;
+  }
+
+  .heroTitle {
+    font-size: 2.8rem;
+  }
+
+  .heroTagline {
+    font-size: 1.2rem;
+  }
+
+  .heroTextContainer {
+    align-items: center;
+    text-align: center;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .heroImageContainer {
+    padding: 1rem; /* Adjust padding on smaller screens */
+  }
+
+  .heroImage {
+    width: 100%; /* Make image full width on smaller screens */
+  }
+}
